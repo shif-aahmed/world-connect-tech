@@ -6,13 +6,12 @@ const HeroBanner = () => {
       <div className="heroOverlay">
         <div className="heroContent">
           <h1>
-            Internet, premium TV and mobility <br /> all in one place
+            Internet, premium TV, and mobile services <br /> all together in one place
           </h1>
 
           <p>
-            With Royal Tech Connect, you will experience a new level of
-            connectivity and entertainment, all backed by cutting-edge
-            technology and exceptional customer support.
+            With World Connect Tech, enjoy an enhanced level of connectivity and entertainment, 
+            supported by advanced technology and outstanding customer care.
           </p>
 
           <a href="tel:+14129950913">

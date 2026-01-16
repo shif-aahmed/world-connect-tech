@@ -1,7 +1,8 @@
 .navbar {
-  background-color: black;
-  color: white;
+  background-color: rgb(233, 233, 233);
+  color: rgb(0, 0, 0);
   width: 100%;
+  border-bottom: 1px solid #333;
 }
 
 /* Top bar */
@@ -27,14 +28,15 @@
 
 /* ✅ ADDED: style contact links */
 .contactInfo a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   cursor: pointer;
+
 }
 
 .contactInfo a:hover {
   text-decoration: none;
-  color: white;
+  color: #e00000;
 }
 
 /* Bottom bar */
@@ -64,12 +66,15 @@
 .link {
   cursor: pointer;
   transition: color 0.3s ease;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
+  font-size: 18px;
 }
-
+.link:hover {
+  color: #e00000;
+}
 .link.active {
-  color: red;
+  color: #e00000;
 }
 
 /* Menu toggle button */
@@ -91,7 +96,7 @@
   .links {
     display: none;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     position: absolute;
     top: 100%;
     right: 20px;

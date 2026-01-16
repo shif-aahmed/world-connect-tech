@@ -22,8 +22,8 @@ const Footer = () => {
             <img src={logo} alt="Logo" />
           </div>
           <p className="footerText">
-            Royaltech Connect is your one-stop shop for TV, internet, and phone
-            services. We offer the best deal in your area, granted.
+            World Connect Tech is your one-stop shop for TV, internet, and phone
+            services. We provide the best deals in your area.
           </p>
           <div className="footerSocials">
             <FaFacebookF />
@@ -51,9 +51,18 @@ const Footer = () => {
 
         {/* Column 3 */}
         <div className="footerCol">
-          <h4>Get in connect</h4>
+          <h4>
+              Get in connect
+          </h4>
           <p className="footerText">
-            Don't miss our future updates. Get subscribed today.
+            <a href="tel:+14129950913">+1 412-995-0913</a>
+            <br />
+            <a href="mailto:info@worldcontechllc.com">
+            info@worldcontechllc.com
+            </a>
+            <br />
+            <br />
+            Don't miss our future updates.
           </p>
         </div>
       </div>

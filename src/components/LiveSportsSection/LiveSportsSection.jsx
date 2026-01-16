@@ -6,12 +6,12 @@ const LiveSportsSection = () => {
   return (
     <section className="liveSportsSection">
       <h2 className="liveSportsHeading">
-        Exciting live sports and entertaining TV shows for your closest companions.
+        Thrilling live sports and captivating TV shows for you and your loved ones.
       </h2>
       <div className="liveSportsContent">
         <div className="liveSportsText">
           <p>
-            We are here to help you customize your ideal package for internet, cable television, and telephone services. Explore top-tier service providers available in your locality based on our expert recommendations. Feel free to contact us to learn about our special promotions.
+            At World Connect Tech, we help you build your perfect package for internet, cable TV, and phone services. Discover top-quality providers in your area through our expert guidance, and reach out to learn about our exclusive offers.
           </p>
         </div>
         <div className="liveSportsImage">

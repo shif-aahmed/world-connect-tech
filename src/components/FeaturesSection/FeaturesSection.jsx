@@ -7,19 +7,19 @@ const FeaturesSection = () => {
       icon: <FaWifi />,
       title: "BROADBAND",
       description:
-        "Enjoy limitless high-speed internet connectivity that covers your entire family and all their devices without any restrictions.",
+        "Experience unlimited high-speed internet for your entire household and all devices, without any limits or interruptions.",
     },
     {
       icon: <FaTv />,
       title: "SATELLITE TV",
       description:
-        "Movies, kid's entertainment, sports, news and more! Over 200 channels! Watch with your loved ones, friends, and family.",
+        "Enjoy movies, kids' shows, sports, news, and more! Access over 200 channels with your family and friends.",
     },
     {
       icon: <FaMobileAlt />,
       title: "MOBILITY",
       description:
-        "Create a customized mobile solution that enables you to share, enjoy entertainment, and maintain global connectivity on your terms.",
+        "Get a tailored mobile solution from World Connect Tech that keeps you connected and entertained wherever you go.",
     },
   ];
 

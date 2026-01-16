@@ -10,7 +10,7 @@
 .featuresContainer {
   max-width: 1200px;
   margin: auto;
-  background-color: #f7f5ef; /* light background */
+  background-color: rgb(233, 233, 233); /* light background */
   display: flex;
   gap: 30px;
   justify-content: space-between;
@@ -21,7 +21,7 @@
 }
 
 .featureCard {
-  background-color: #f7f5ef;
+  background-color: transparent;
   flex: 1 1 300px; /* responsive width */
   text-align: center;
   padding: 30px 20px;
@@ -34,7 +34,7 @@
   justify-content: center;     /* horizontal center */
   font-size: 24px;             /* adjust as needed */
   color: #ffffff;
-  background-color: #d4af37;
+  background-color: #e00000;
   width: 60px;                 /* make circle a bit bigger */
   height: 60px;
   border-radius: 50%;

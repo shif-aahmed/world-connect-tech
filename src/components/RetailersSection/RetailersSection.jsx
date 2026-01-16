@@ -9,12 +9,12 @@ import retailer6 from "../../assets/spectrumbusiness.png";
 
 const RetailersSection = () => {
   const retailers = [
+    retailer5,
+    retailer6,
     retailer1,
     retailer2,
     retailer3,
     retailer4,
-    retailer5,
-    retailer6,
   ];
 
   return (
