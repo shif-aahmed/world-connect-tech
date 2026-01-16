@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  color: #333;
+  color: #212121;
   line-height: 1.7;
 }
 
@@ -27,5 +27,5 @@
 }
 
 .aboutContent strong {
-  color: #f57c00;
+  color: #818181;
 }
