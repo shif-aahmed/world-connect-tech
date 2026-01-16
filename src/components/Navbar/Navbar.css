@@ -1,0 +1,106 @@
+.navbar {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+/* Top bar */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ✅ ADDED: style contact links */
+.contactInfo a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contactInfo a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* Bottom bar */
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.link {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.link.active {
+  color: red;
+}
+
+/* Menu toggle button */
+.menuToggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* RESPONSIVE WITH TOGGLE */
+/* ========================= */
+
+@media (max-width: 769px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .links.show {
+    display: flex;
+    z-index: 9999;
+  }
+}

@@ -1,0 +1,72 @@
+.liveSportsSection {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background-color: #fff; /* white background */
+}
+
+.liveSportsHeading {
+  font-size: 36px; /* increased size */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.4;
+  color: #222;
+}
+
+.liveSportsContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: nowrap; /* prevent wrapping before 768px */
+}
+
+.liveSportsText {
+  flex: 1 1 500px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.liveSportsImage {
+  flex: 1 1 500px;
+}
+
+.liveSportsImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ===================== */
+/* Medium screens (≤992px) */
+@media (max-width: 992px) {
+  .liveSportsHeading {
+    font-size: 32px; /* slightly smaller but still large */
+  }
+  .liveSportsContent {
+    gap: 30px; /* reduce gap */
+    flex-wrap: nowrap; /* still prevent wrapping */
+  }
+}
+
+/* Small screens (≤768px) */
+@media (max-width: 768px) {
+  .liveSportsHeading {
+    font-size: 28px;
+  }
+  .liveSportsContent {
+    flex-direction: column; /* stack into single column */
+    gap: 20px;
+  }
+  .liveSportsText {
+  flex: 1 1 100px;
+  }
+  .liveSportsImage {
+    flex: 1 1 100px;
+  }
+}

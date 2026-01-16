@@ -1,0 +1,73 @@
+.featuresSection {
+  width: 100%;
+  padding: 60px 20px;
+ /* pull it slightly above hero if needed */
+  box-sizing: border-box;
+    position: relative;  /* allow z-index */
+  z-index: 1;          
+}
+
+.featuresContainer {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f7f5ef; /* light background */
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -80px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.featureCard {
+  background-color: #f7f5ef;
+  flex: 1 1 300px; /* responsive width */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.featureIcon {
+  display: flex;               /* flex to center inside */
+  align-items: center;         /* vertical center */
+  justify-content: center;     /* horizontal center */
+  font-size: 24px;             /* adjust as needed */
+  color: #ffffff;
+  background-color: #d4af37;
+  width: 60px;                 /* make circle a bit bigger */
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;    /* center circle in card */
+  padding: 0;                  /* remove padding */
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.featureDesc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===================== */
+/* Responsive */
+@media (max-width: 992px) {
+  .featuresContainer {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuresContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .featureCard {
+  flex: 1 1 170px; 
+  }
+}

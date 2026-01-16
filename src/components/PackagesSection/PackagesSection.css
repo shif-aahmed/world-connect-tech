@@ -1,0 +1,208 @@
+.packagesSection {
+  width: 100%;
+  padding: 80px 20px 0px;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.packagesHeading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.packagesSubheading {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.packagesCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.packageCard {
+  background-color: #f7f5ef;
+  padding: 40px 30px;
+  border-radius: 12px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.packageCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.packageCard h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.packageCard p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* TRIPLE PLAY CARD */
+.tripleSubheading {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.tripleIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 22px;
+  color: #d4af37;
+}
+.availability {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ===================== */
+/* MODAL OVERLAY */
+.packageModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* prevents edge overflow */
+}
+
+/* MODAL */
+.packageModal {
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 85vh;          /* ✅ FIXED HEIGHT ISSUE */
+  overflow-y: auto;          /* ✅ INTERNAL SCROLL */
+  position: relative;
+  text-align: center;
+  scrollbar-width: thin;
+}
+
+/* CLOSE BUTTON */
+.closeModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* TRIPLE PLAY GRID */
+.triplePricingGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CARD */
+.pricingCard {
+  border: 2px solid #ddd;
+  border-radius: 14px;
+  padding: 30px 25px;
+  width: 280px;
+  max-width: 100%;      /* ✅ PREVENT OVERFLOW */
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.pricingCard h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f57c00;
+  margin-bottom: 15px;
+}
+
+.price span {
+  font-size: 14px;
+  color: #666;
+}
+
+.pricingCard ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.pricingCard ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.cardFooter {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #666;
+}
+
+/* BEST VALUE */
+.bestValue {
+  border-color: #2f80ed;
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  right: 15px;
+  background: #2f80ed;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ===================== */
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .packagesHeading {
+    font-size: 28px;
+  }
+
+  .packageModal {
+    padding: 25px;
+  }
+
+  .pricingCard {
+    width: 100%;          /* ✅ FULL WIDTH ON MOBILE */
+  }
+}
+.tripleIcons{
+  margin-bottom: 10px;
+}
