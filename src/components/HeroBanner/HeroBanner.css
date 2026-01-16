@@ -45,8 +45,8 @@
   }
   
   .heroBtn:hover {
-    background-color: #b8962e;
-    color: black;
+    background-color: #a50000;
+    color: rgb(255, 255, 255);
   }
   
   /* ========================= */

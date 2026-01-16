@@ -6,7 +6,8 @@ const PackagesSection = () => {
   const [activePackage, setActivePackage] = useState(null);
 
   // Dynamic card rendering (UNIVERSAL)
-  const renderTripleCards = (cardsData, highlightIndex = null) => (
+  const renderTripleCards = (cardsData, highlightIndex = null, showAvailability = true) => (
+
     <div className="triplePricingGrid">
       {cardsData.map((card, index) => (
         <div
@@ -16,6 +17,9 @@ const PackagesSection = () => {
           {highlightIndex === index && <div className="badge">Best value</div>}
 
           <h4>{card.title}</h4>
+         {highlightIndex === index && showAvailability && (
+  <p className="availabilityNote">*where available</p>
+)}
 
           {card.subtitle && <p className="tvSubtitle">{card.subtitle}</p>}
 
@@ -52,7 +56,12 @@ const PackagesSection = () => {
       price: "$70",
       period: "/mo",
       features: [],
-      footer: ["With ABP & paperless bill", "Gateway included", "2-year price lock", "$100 gift card"],
+      footer: [
+        "With ABP & paperless bill",
+        "Gateway included",
+        "2-year price lock",
+        "$100 gift card",
+      ],
     },
     {
       title: "500 Mbps",
@@ -77,7 +86,7 @@ const PackagesSection = () => {
       features: [],
       footer: [
         "Includes local channels plus:",
-        "CBS, TNT, A&E, FOX, FXX, USA, VTV, WE TV, Food Network, Bravo, MTV, TLC, ESPN",
+        "CBS, TNT, A&E, FOX, USA, WE TV, Food Network, Bravo, MTV, TLC, ESPN",
       ],
     },
     {
@@ -95,7 +104,7 @@ const PackagesSection = () => {
       features: [],
       footer: [
         "Includes local channels plus:",
-        "AMC, TLC, History Channel, HGTV, Lifetime, A&E, Discovery, Food Network",
+        "AMC, TLC, History Channel, HGTV, Lifetime, A&E, Discovery Channel, Food Network, BBC, Hallmark Channel, MTV",
       ],
     },
     {
@@ -104,7 +113,7 @@ const PackagesSection = () => {
       features: [],
       footer: [
         "Includes local channels plus:",
-        "HBO, Showtime, Starz, ESPN, CBS Sports, ACCN, PAC-12 Networks",
+        "HBO Max, HBO ZONE, ESPN U, ACCN ESPN, PAC 12 Networks, CBS Sports Network, Stadium College Sports, FS2, BIG Network, SHOWTIME, MAX, STARZ",
       ],
     },
   ];
@@ -112,13 +121,13 @@ const PackagesSection = () => {
   const singlePlayMobile = [
     {
       title: "Unlimited Max",
-      price: "$1.55",
+      price: "$55",
       period: "/mo",
       features: [],
       footer: [
-        "2 lines – $1.80/mo",
-        "3 lines – $1.80/mo",
-        "Get your third line free",
+        "2 lines – $80/mo",
+        "3 lines – $80/mo",
+        "Get your 3rd line free",
         "50GB premium data",
         "Unlimited talk and text",
         "15GB mobile hotspot",
@@ -127,13 +136,13 @@ const PackagesSection = () => {
     },
     {
       title: "Unlimited",
-      price: "$1.45",
+      price: "$45",
       period: "/mo",
       features: [],
       footer: [
-        "2 lines – $1.60/mo",
-        "3 lines – $1.60/mo",
-        "Get your third line free",
+        "2 lines – $60/mo",
+        "3 lines – $60/mo",
+        "Get your 3rd line free",
         "20GB premium data",
         "Unlimited talk and text",
         "5GB mobile hotspot",
@@ -141,8 +150,8 @@ const PackagesSection = () => {
       ],
     },
     {
-      title: "5GB",
-      price: "$1.25",
+      title: "5 Gbps",
+      price: "$25",
       period: "/mo",
       features: [],
       footer: [
@@ -153,8 +162,8 @@ const PackagesSection = () => {
       ],
     },
     {
-      title: "1GB",
-      price: "$1.15",
+      title: "1 Gbps",
+      price: "$15",
       period: "/mo",
       features: [],
       footer: [
@@ -169,21 +178,21 @@ const PackagesSection = () => {
   const doublePlayInternetMobile = [
     {
       title: "1 Gbps / 2 Gbps*",
-      price: "$1.05",
+      price: "$105",
       period: "/mo",
       features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "500 Mbps",
-      price: "$1.85",
+      price: "$85",
       period: "/mo",
       features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "300 Mbps",
-      price: "$1.75",
+      price: "$75",
       period: "/mo",
       features: ["Streaming", "Gaming", "Downloading large files"],
       footer: ["1-year price lock", "Gateway included"],
@@ -193,24 +202,57 @@ const PackagesSection = () => {
   const doublePlayInternetTV = [
     {
       title: "1 Gbps / 2 Gbps*",
-      price: "$1.95",
+      price: "$95",
       period: "/mo",
       features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "500 Mbps",
-      price: "$1.75",
+      price: "$75",
       period: "/mo",
       features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "300 Mbps",
-      price: "$1.65",
+      price: "$65",
       period: "/mo",
       features: ["Streaming", "Gaming", "Downloading large files"],
       footer: ["1-year price lock", "Gateway included"],
+    },
+  ];
+
+  const triplePlayCards = [
+    {
+      title: "1 Gbps / 2 Gbps*",
+      price: "$130",
+      period: "/mo",
+      features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices",],
+      footer: [
+        "1-year price lock",
+        "Gateway included",
+      ],
+    },
+    {
+      title: "500 Mbps",
+      price: "$110",
+      period: "/mo",
+      features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school",],
+      footer: [
+        "1-year price lock",
+        "Gateway included",
+      ],
+    },
+    {
+      title: "300 Mbps",
+      price: "$100",
+      period: "/mo",
+      features: ["Streaming", "Gaming", "Downloading large files",],
+      footer: [
+        "1-year price lock",
+        "Gateway included",
+      ],
     },
   ];
 
@@ -222,17 +264,32 @@ const PackagesSection = () => {
         <div className="packagesCards">
           <div className="packageCard triplePlayCard" onClick={() => setActivePackage("single")}>
             <h3>Single Play</h3>
-            <div className="tripleIcons"><FaWifi /><FaMobileAlt /><FaTv /></div>
+            <p>Internet / Mobile / TV</p>
+            <div className="tripleIcons">
+              <FaWifi />
+              <FaMobileAlt />
+              <FaTv />
+            </div>
           </div>
 
           <div className="packageCard triplePlayCard" onClick={() => setActivePackage("double")}>
             <h3>Double Play</h3>
-            <div className="tripleIcons"><FaWifi /><FaMobileAlt /><FaTv /></div>
+            <p>Internet / Mobile / TV</p>
+            <div className="tripleIcons">
+              <FaWifi />
+              <FaMobileAlt />
+              <FaTv />
+            </div>
           </div>
 
           <div className="packageCard triplePlayCard" onClick={() => setActivePackage("triple")}>
             <h3>Triple Play</h3>
-            <div className="tripleIcons"><FaWifi /><FaMobileAlt /><FaTv /></div>
+            <p>Internet / Mobile / TV</p>
+            <div className="tripleIcons">
+              <FaWifi />
+              <FaMobileAlt />
+              <FaTv />
+            </div>
           </div>
         </div>
       </section>
@@ -240,32 +297,47 @@ const PackagesSection = () => {
       {activePackage && (
         <div className="packageModalOverlay">
           <div className="packageModal tripleModal">
-            <button className="closeModal" onClick={() => setActivePackage(null)}>✕</button>
+            <button className="closeModal" onClick={() => setActivePackage(null)}>
+              ✕
+            </button>
 
             {activePackage === "single" && (
               <>
                 <h3>Internet</h3>
-                <div className="tripleIcons"><FaWifi /></div>
+                <div className="tripleIcons">
+                  <FaWifi />
+                </div>
                 {renderTripleCards(singlePlayInternet)}
 
                 <h3 style={{ marginTop: "50px" }}>Entertainment TV</h3>
-                <div className="tripleIcons"><FaTv /></div>
+                <div className="tripleIcons">
+                  <FaTv />
+                </div>
                 {renderTripleCards(singlePlayEntertainmentTV)}
 
                 <h3 style={{ marginTop: "50px" }}>Mobile Phone</h3>
-                <div className="tripleIcons"><FaMobileAlt /></div>
-                {renderTripleCards(singlePlayMobile, 1)}
+                <div className="tripleIcons">
+                  <FaMobileAlt />
+                </div>
+                {renderTripleCards(singlePlayMobile, 1, false)}
+
               </>
             )}
 
             {activePackage === "double" && (
               <>
                 <h3>Internet + Mobile</h3>
-                <div className="tripleIcons"><FaWifi /><FaMobileAlt /></div>
+                <div className="tripleIcons">
+                  <FaWifi />
+                  <FaMobileAlt />
+                </div>
                 {renderTripleCards(doublePlayInternetMobile, 0)}
 
                 <h3 style={{ marginTop: "50px" }}>Internet + Entertainment TV</h3>
-                <div className="tripleIcons"><FaWifi /><FaTv /></div>
+                <div className="tripleIcons">
+                  <FaWifi />
+                  <FaTv />
+                </div>
                 {renderTripleCards(doublePlayInternetTV, 0)}
               </>
             )}
@@ -273,8 +345,12 @@ const PackagesSection = () => {
             {activePackage === "triple" && (
               <>
                 <h3>Internet + Mobile + Entertainment TV</h3>
-                <div className="tripleIcons"><FaWifi /><FaMobileAlt /><FaTv /></div>
-                {renderTripleCards(singlePlayInternet, 0)}
+                <div className="tripleIcons">
+                  <FaWifi />
+                  <FaMobileAlt />
+                  <FaTv />
+                </div>
+                {renderTripleCards(triplePlayCards, 0)}
               </>
             )}
           </div>

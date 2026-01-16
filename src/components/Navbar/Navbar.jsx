@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Top section */}
+<div className="top">For new internet services, contact us at:</div>
       <div className="topBar">
         <div className="contactInfo">
           <a href="tel:+14129950913">+1 412 995 0913</a>
