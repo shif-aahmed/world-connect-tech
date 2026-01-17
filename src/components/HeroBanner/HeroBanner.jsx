@@ -13,7 +13,8 @@ const HeroBanner = () => {
             With World Connect Tech, enjoy an enhanced level of connectivity and entertainment, 
             supported by advanced technology and outstanding customer care.
           </p>
-
+        <div >For new internet services:</div>
+        <br />
           <a href="tel:+14129950913">
             <button className="heroBtn">Call Us Now</button>
           </a>

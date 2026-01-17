@@ -18,27 +18,6 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-<div className="top">For new internet services, contact us at:</div>
-      <div className="topBar">
-        <div className="contactInfo">
-          <a href="tel:+14129950913">+1 412 995 0913</a>
-          <a href="mailto:info@worldcontechllc.com">
-            info@worldcontechllc.com
-          </a>
-          <a
-            href="https://www.google.com/maps?q=141+E+26TH+St,+Erie,+PA+16504"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            141 E 26TH St, Erie, PA 16504
-          </a>
-        </div>
-
-        <div className="socials">
-          <FaFacebookF />
-          <FaInstagram />
-        </div>
-      </div>
 
       {/* Bottom section */}
       <div className="bottomBar">
@@ -64,6 +43,26 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
+        </div>
+      </div>
+            <div className="topBar">
+        <div className="contactInfo">
+          <a href="tel:+14129950913">+1 412 995 0913</a>
+          <a href="mailto:info@worldcontechllc.com">
+            info@worldcontechllc.com
+          </a>
+          <a
+            href="https://www.google.com/maps?q=141+E+26TH+St,+Erie,+PA+16504"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            141 E 26TH St, Erie, PA 16504
+          </a>
+        </div>
+
+        <div className="socials">
+          <FaFacebookF />
+          <FaInstagram />
         </div>
       </div>
     </nav>
