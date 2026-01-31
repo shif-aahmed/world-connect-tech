@@ -5,19 +5,32 @@ const HeroBanner = () => {
     <section className="hero">
       <div className="heroOverlay">
         <div className="heroContent">
+
           <h1>
-            Internet, premium TV, and mobile services <br /> all together in one place
+            Fast & Reliable Internet Services <br />
+            <span>Starting Today in Your Area</span>
           </h1>
 
           <p>
-            With World Connect Tech, enjoy an enhanced level of connectivity and entertainment, 
-            supported by advanced technology and outstanding customer care.
+            Get high-speed internet, premium TV, and mobile plans with
+            professional installation and 24/7 customer support.
           </p>
-        <div >For new internet services:</div>
-        <br />
-          <a href="tel:+14129950913">
-            <button className="heroBtn">Call Us Now</button>
-          </a>
+
+          <ul className="heroPoints">
+            <li>✔ Same-Day Installation Available</li>
+            <li>✔ No Hidden Fees</li>
+            <li>✔ Trusted Local Providers</li>
+          </ul>
+
+          <div className="heroCTA">
+            <a href="tel:+14129950913">
+              <button className="heroBtn">Call Now</button>
+            </a>
+
+            <span className="heroSubText">
+              Speak to a specialist • Free consultation
+            </span>
+          </div>
         </div>
       </div>
     </section>

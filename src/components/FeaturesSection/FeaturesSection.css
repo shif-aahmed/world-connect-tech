@@ -1,57 +1,56 @@
 .featuresSection {
   width: 100%;
   padding: 60px 20px;
- /* pull it slightly above hero if needed */
   box-sizing: border-box;
-    position: relative;  /* allow z-index */
-  z-index: 1;          
+  position: relative;
+  z-index: 1;
 }
 
 .featuresContainer {
   max-width: 1200px;
   margin: auto;
-  background-color: rgb(233, 233, 233); /* light background */
+  background-color: #f2f2f2;
   display: flex;
   gap: 30px;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: -80px;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);
-
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 20px 10px;
 }
 
 .featureCard {
   background-color: transparent;
-  flex: 1 1 300px; /* responsive width */
+  flex: 1 1 300px;
   text-align: center;
   padding: 30px 20px;
-  border-radius: 10px;
 }
 
 .featureIcon {
-  display: flex;               /* flex to center inside */
-  align-items: center;         /* vertical center */
-  justify-content: center;     /* horizontal center */
-  font-size: 24px;             /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
   color: #ffffff;
   background-color: #e00000;
-  width: 60px;                 /* make circle a bit bigger */
-  height: 60px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  margin: 0 auto 15px auto;    /* center circle in card */
-  padding: 0;                  /* remove padding */
+  margin: 0 auto 18px auto;
 }
 
 .featureTitle {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
 }
 
 .featureDesc {
   font-size: 14px;
   line-height: 1.6;
-  color: #555;
+  color: #444;
 }
 
 /* ===================== */
@@ -66,8 +65,11 @@
   .featuresContainer {
     flex-direction: column;
     gap: 20px;
+    margin-top: -40px;
   }
+
   .featureCard {
-  flex: 1 1 170px; 
+    flex: 1 1 100%;
+    padding: 25px 15px;
   }
 }

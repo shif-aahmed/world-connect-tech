@@ -53,8 +53,7 @@ const PackagesSection = () => {
   const singlePlayInternet = [
     {
       title: "1 Gbps",
-      price: "$70",
-      period: "/mo",
+
       features: [],
       footer: [
         "With ABP & paperless bill",
@@ -65,15 +64,13 @@ const PackagesSection = () => {
     },
     {
       title: "500 Mbps",
-      price: "$60",
-      period: "/mo",
+
       features: [],
       footer: ["With ABP & paperless bill", "Gateway included", "1-year price lock"],
     },
     {
       title: "300 Mbps",
-      price: "$40",
-      period: "/mo",
+
       features: [],
       footer: ["With ABP & paperless bill", "Gateway included", "1-year price lock"],
     },
@@ -121,8 +118,7 @@ const PackagesSection = () => {
   const singlePlayMobile = [
     {
       title: "Unlimited Max",
-      price: "$55",
-      period: "/mo",
+
       features: [],
       footer: [
         "2 lines – $80/mo",
@@ -136,8 +132,7 @@ const PackagesSection = () => {
     },
     {
       title: "Unlimited",
-      price: "$45",
-      period: "/mo",
+
       features: [],
       footer: [
         "2 lines – $60/mo",
@@ -151,8 +146,7 @@ const PackagesSection = () => {
     },
     {
       title: "5 Gbps",
-      price: "$25",
-      period: "/mo",
+
       features: [],
       footer: [
         "5GB premium data",
@@ -163,8 +157,7 @@ const PackagesSection = () => {
     },
     {
       title: "1 Gbps",
-      price: "$15",
-      period: "/mo",
+
       features: [],
       footer: [
         "1GB premium data",
@@ -178,22 +171,19 @@ const PackagesSection = () => {
   const doublePlayInternetMobile = [
     {
       title: "1 Gbps / 2 Gbps*",
-      price: "$105",
-      period: "/mo",
+
       features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "500 Mbps",
-      price: "$85",
-      period: "/mo",
+
       features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "300 Mbps",
-      price: "$75",
-      period: "/mo",
+ 
       features: ["Streaming", "Gaming", "Downloading large files"],
       footer: ["1-year price lock", "Gateway included"],
     },
@@ -202,22 +192,19 @@ const PackagesSection = () => {
   const doublePlayInternetTV = [
     {
       title: "1 Gbps / 2 Gbps*",
-      price: "$95",
-      period: "/mo",
+
       features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "500 Mbps",
-      price: "$75",
-      period: "/mo",
+ 
       features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "300 Mbps",
-      price: "$65",
-      period: "/mo",
+
       features: ["Streaming", "Gaming", "Downloading large files"],
       footer: ["1-year price lock", "Gateway included"],
     },
@@ -226,8 +213,7 @@ const PackagesSection = () => {
   const triplePlayCards = [
     {
       title: "1 Gbps / 2 Gbps*",
-      price: "$130",
-      period: "/mo",
+
       features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices",],
       footer: [
         "1-year price lock",
@@ -236,8 +222,7 @@ const PackagesSection = () => {
     },
     {
       title: "500 Mbps",
-      price: "$110",
-      period: "/mo",
+
       features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school",],
       footer: [
         "1-year price lock",
@@ -246,8 +231,7 @@ const PackagesSection = () => {
     },
     {
       title: "300 Mbps",
-      price: "$100",
-      period: "/mo",
+
       features: ["Streaming", "Gaming", "Downloading large files",],
       footer: [
         "1-year price lock",

@@ -5,21 +5,21 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: <FaWifi />,
-      title: "BROADBAND",
+      title: "HIGH-SPEED INTERNET",
       description:
-        "Experience unlimited high-speed internet for your entire household and all devices, without any limits or interruptions.",
+        "Fast, reliable broadband for streaming, work, gaming, and smart devices — with stable speeds and no interruptions.",
     },
     {
       icon: <FaTv />,
-      title: "SATELLITE TV",
+      title: "PREMIUM TV CHANNELS",
       description:
-        "Enjoy movies, kids' shows, sports, news, and more! Access over 200 channels with your family and friends.",
+        "Access 200+ channels including sports, movies, news, and kids’ entertainment — all in one simple setup.",
     },
     {
       icon: <FaMobileAlt />,
-      title: "MOBILITY",
+      title: "MOBILE CONNECTIVITY",
       description:
-        "Get a tailored mobile solution from World Connect Tech that keeps you connected and entertained wherever you go.",
+        "Stay connected on the go with flexible mobile plans designed to match your data and usage needs.",
     },
   ];
 

@@ -1,21 +1,24 @@
 import React from "react";
 import "./LiveSportsSection.css";
-import liveSportsImage from "../../assets/livesport.png"; // replace with your image
+import liveSportsImage from "../../assets/livesport.png";
 
 const LiveSportsSection = () => {
   return (
     <section className="liveSportsSection">
       <h2 className="liveSportsHeading">
-        Thrilling live sports and captivating TV shows for you and your loved ones.
+        Stream live sports, premium TV channels, and on-demand entertainment with reliable high-speed internet.
       </h2>
+
       <div className="liveSportsContent">
         <div className="liveSportsText">
           <p>
-            At World Connect Tech, we help you build your perfect package for internet, cable TV, and phone services. Discover top-quality providers in your area through our expert guidance, and reach out to learn about our exclusive offers.
+            World Connect Tech helps you compare and choose the best internet, cable TV, and phone service providers available in your area. 
+            Whether you want uninterrupted live sports, family entertainment, or bundled deals at competitive prices, our experts guide you to the right option—fast and hassle-free.
           </p>
         </div>
+
         <div className="liveSportsImage">
-          <img src={liveSportsImage} alt="Live Sports" />
+          <img src={liveSportsImage} alt="Live Sports Streaming and TV Services" />
         </div>
       </div>
     </section>
