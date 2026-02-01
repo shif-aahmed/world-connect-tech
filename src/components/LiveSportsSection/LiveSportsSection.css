@@ -4,7 +4,36 @@
   box-sizing: border-box;
   background-color: #fff; /* white background */
 }
+.callNow{
+  /* text-align: center; */
+  font-size: 18px;
+  padding: 20px 20px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  line-height: 1.4;
+  color: #ffffff;
+  background-color: rgb(0, 0, 40);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.callNowText{
+  width: 60%;
+}
+.callNowBtn{
+  background-color: #e00000;
+  color: white;
+    border: none;
+  padding: 10px 20px;
+    width: 30%;
 
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
 .liveSportsHeading {
   font-size: 36px; /* increased size */
   font-weight: bold;

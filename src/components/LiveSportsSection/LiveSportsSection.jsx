@@ -5,6 +5,12 @@ import liveSportsImage from "../../assets/livesport.png";
 const LiveSportsSection = () => {
   return (
     <section className="liveSportsSection">
+      <div className="callNow">
+        <div className="callNowText">Enjoy fast, reliable internet, premium TV, and flexible mobile plans — all with professional setup and 24/7 support.</div>
+        <a href="tel:+14129950913">
+              <button className="callNowBtn">Call Now</button>
+            </a>
+      </div>
       <h2 className="liveSportsHeading">
         Stream live sports, premium TV channels, and on-demand entertainment with reliable high-speed internet.
       </h2>

@@ -29,8 +29,10 @@ const FeaturesSection = () => {
         {features.map((feature, index) => (
           <div key={index} className="featureCard">
             <div className="featureIcon">{feature.icon}</div>
-            <h3 className="featureTitle">{feature.title}</h3>
-            <p className="featureDesc">{feature.description}</p>
+            <div className="featureContent">
+              <h3 className="featureTitle">{feature.title}</h3>
+              <p className="featureDesc">{feature.description}</p>
+            </div>
           </div>
         ))}
       </div>
