@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import logo from "../../assets/logo.png";
 
 import "./Navbar.css";
@@ -19,13 +25,36 @@ const Navbar = () => {
   return (
     <nav className="navbar">
 
-      {/* Bottom section */}
+      {/* TOP BAR (Contact Info) */}
+      <div className="topBar">
+        <div className="contactInfo">
+          <a href="tel:+14129950913">
+            <FaPhoneAlt /> +1 412 995 0913
+          </a>
+          <a href="mailto:info@worldcontechllc.com">
+            <FaEnvelope /> info@worldcontechllc.com
+          </a>
+          <a
+            href="https://www.google.com/maps?q=141+E+26TH+St,+Erie,+PA+16504"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaMapMarkerAlt /> 141 E 26TH St, Erie, PA 16504
+          </a>
+        </div>
+
+        <div className="socials">
+          <FaFacebookF />
+          <FaInstagram />
+        </div>
+      </div>
+
+      {/* BOTTOM BAR (Logo + Links) */}
       <div className="bottomBar">
         <div className="logo">
           <img src={logo} alt="Logo" />
         </div>
 
-        {/* Menu toggle button (mobile only) */}
         <div className="menuToggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
@@ -43,26 +72,6 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-        </div>
-      </div>
-            <div className="topBar">
-        <div className="contactInfo">
-          <a href="tel:+14129950913">+1 412 995 0913</a>
-          <a href="mailto:info@worldcontechllc.com">
-            info@worldcontechllc.com
-          </a>
-          <a
-            href="https://www.google.com/maps?q=141+E+26TH+St,+Erie,+PA+16504"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            141 E 26TH St, Erie, PA 16504
-          </a>
-        </div>
-
-        <div className="socials">
-          <FaFacebookF />
-          <FaInstagram />
         </div>
       </div>
     </nav>

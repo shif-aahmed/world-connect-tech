@@ -5,46 +5,69 @@
   border-bottom: 1px solid #333;
 }
 
-/* Top bar */
+/* ========================= */
+/* TOP BAR (CONTACT INFO) */
+/* ========================= */
+
 .topBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
-  border-top: 1px solid #333;
   font-size: 14px;
 }
-.socials {
-  display: flex;
-  gap: 15px;
-}
 
+/* LEFT HALF – RED */
 .contactInfo {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  width: 80%;
+  background-color: #b00000;
+  padding: 6px 20px;
 }
 
-/* ✅ ADDED: style contact links */
 .contactInfo a {
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
-
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .contactInfo a:hover {
-  text-decoration: none;
-  color: #e00000;
+  color: #ffe5e5;
 }
 
-/* Bottom bar */
+/* RIGHT HALF – NAVY */
+.socials {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  background-color: #0b1c3d;
+  padding: 8px 20px;
+  color: #ffffff;
+clip-path: polygon(
+  0 0,          /* top-left (unchanged) */
+  100% 0,       /* top-right */
+  100% 100%,    /* bottom-right */
+  -5% 100%      /* bottom-left (outer / sticks out) */
+);
+}
+
+/* ========================= */
+/* BOTTOM BAR (LOGO + LINKS) */
+/* ========================= */
+
 .bottomBar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 12px 20px;
   position: relative;
+  gap: 40px; /* brings links closer to logo */
 }
 
 .logo {
@@ -52,14 +75,14 @@
   font-weight: bold;
 }
 
-.links {
-  display: flex;
-  gap: 25px;
-}
-
 .logo img {
   width: 200px;
   height: auto;
+}
+
+.links {
+  display: flex;
+  gap: 25px;
 }
 
 .link {
@@ -69,14 +92,19 @@
   text-decoration: none;
   font-size: 18px;
 }
+
 .link:hover {
   color: #e00000;
 }
+
 .link.active {
   color: #e00000;
 }
 
-/* Menu toggle button */
+/* ========================= */
+/* MENU TOGGLE */
+/* ========================= */
+
 .menuToggle {
   display: none;
   font-size: 24px;
@@ -84,7 +112,7 @@
 }
 
 /* ========================= */
-/* RESPONSIVE WITH TOGGLE */
+/* RESPONSIVE */
 /* ========================= */
 
 @media (max-width: 769px) {
@@ -106,5 +134,14 @@
   .links.show {
     display: flex;
     z-index: 9999;
+  }
+  .topBar{
+    flex-wrap: wrap;
+  }
+  .socials {
+    width: 100%;
+  }
+  .contactInfo {
+     width: 100%; 
   }
 }
