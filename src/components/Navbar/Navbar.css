@@ -3,6 +3,7 @@
   color: rgb(0, 0, 0);
   width: 100%;
   border-bottom: 1px solid #333;
+
 }
 
 /* ========================= */
@@ -14,6 +15,10 @@
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+    position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* LEFT HALF – RED */
@@ -46,7 +51,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  background-color: #0b1c3d;
+  background-color: #000000;
   padding: 8px 20px;
   color: #ffffff;
 clip-path: polygon(

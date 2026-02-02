@@ -6,21 +6,18 @@ const HeroBanner = () => {
       <div className="heroOverlay">
         <div className="heroContent">
 
-          <h1>
-            Fast & Reliable Internet Services <br />
-            <span>Starting Today in Your Area</span>
-          </h1>
+          <div className="heroTopText">
+            <span>Fast Connection</span> •
+            <span>Reliable</span> •
+            <span>Fast Support</span>
+          </div>
+
+          <h1>Fast & Reliable Internet Services</h1>
 
           <p>
-            Get high-speed internet, premium TV, and mobile plans with
-            professional installation and 24/7 customer support.
+            High-speed internet, premium TV, and mobile plans —
+            professionally installed with 24/7 customer support.
           </p>
-
-          <ul className="heroPoints">
-            <li>✔ Same-Day Installation Available</li>
-            <li>✔ No Hidden Fees</li>
-            <li>✔ Trusted Local Providers</li>
-          </ul>
 
           <div className="heroCTA">
             <a href="tel:+14129950913">
@@ -31,6 +28,7 @@ const HeroBanner = () => {
               Speak to a specialist • Free consultation
             </span>
           </div>
+
         </div>
       </div>
     </section>

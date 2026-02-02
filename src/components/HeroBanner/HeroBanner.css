@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
-  height: 90vh;
-  background-image: url("../../assets/hero.png");
+  height: 100vh;
+  background-image: url("../../assets/hero.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -10,78 +10,124 @@
 .heroOverlay {
   width: 100%;
   height: 100%;
-
+  background-color: #0000007d;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .heroContent {
-  max-width: 620px;
+  max-width: 720px;
   padding: 0 40px;
   color: white;
+  text-align: center;
 }
 
-.heroBadge {
-  display: inline-block;
-  background-color: #ffcc00;
-  color: #000;
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 20px;
-  margin-bottom: 16px;
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.heroTopText,
+.heroContent h1,
+.heroContent p,
+.heroCTA {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.heroTopText {
+  animation-delay: 0.2s;
+}
+
+.heroContent h1 {
+  animation-delay: 0.4s;
+}
+
+.heroContent p {
+  animation-delay: 0.6s;
+}
+
+.heroCTA {
+  animation-delay: 0.8s;
+}
+
+/* ========================= */
+/* Top small text */
+/* ========================= */
+
+.heroTopText {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.heroTopText span {
+  margin: 0 8px;
+}
+
+/* ========================= */
+/* Heading */
+/* ========================= */
 
 .heroContent h1 {
   font-size: 42px;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   line-height: 1.2;
+  background: linear-gradient(180deg, #ff0000, #ff5050);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.heroContent h1 span {
-  color: #ffcc00;
-}
+/* ========================= */
+/* Description */
+/* ========================= */
 
 .heroContent p {
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   opacity: 0.95;
 }
 
-.heroPoints {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 28px;
-}
-
-.heroPoints li {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
+/* ========================= */
+/* CTA */
+/* ========================= */
 
 .heroCTA {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
 .heroBtn {
-  background-color: #e00000;
+  background: linear-gradient(270deg, #ff0000, #6c0000);
   color: white;
   border: none;
-  padding: 14px 28px;
+  padding: 14px 34px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   border-radius: 30px;
-  width: fit-content;
   transition: all 0.3s ease;
 }
 
 .heroBtn:hover {
-  background-color: #b80000;
+  background: linear-gradient(270deg, #6c0000, #ff0000);
   transform: translateY(-2px);
 }
 
@@ -122,7 +168,7 @@
     font-size: 24px;
   }
 
-  .heroPoints li {
-    font-size: 13px;
+  .heroTopText {
+    font-size: 12px;
   }
 }
