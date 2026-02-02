@@ -2,10 +2,79 @@
   width: 100%;
   padding: 60px 20px;
   box-sizing: border-box;
-  background-color: #fff; /* white background */
+  background-color: #fff;
 }
-.callNow{
-  /* text-align: center; */
+
+/* ===================== */
+/* ANIMATIONS */
+/* ===================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hidden by default */
+.animate-call,
+.animate-heading,
+.animate-left,
+.animate-right {
+  opacity: 0;
+}
+
+/* Trigger on scroll */
+.liveSportsSection.in-view .animate-call {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.liveSportsSection.in-view .animate-heading {
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.liveSportsSection.in-view .animate-left {
+  animation: fadeLeft 0.9s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.liveSportsSection.in-view .animate-right {
+  animation: fadeRight 0.9s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* ===================== */
+/* Call Now Bar */
+/* ===================== */
+
+.callNow {
   font-size: 18px;
   padding: 20px 20px;
   font-weight: normal;
@@ -17,16 +86,16 @@
   align-items: center;
   justify-content: space-evenly;
 }
-.callNowText{
+
+.callNowText {
   width: 60%;
 }
-.callNowBtn{
+
+.callNowBtn {
   background-color: #e00000;
   color: white;
-    border: none;
+  border: none;
   padding: 10px 20px;
-    width: 30%;
-
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -34,8 +103,13 @@
   width: fit-content;
   transition: all 0.3s ease;
 }
+
+/* ===================== */
+/* Content */
+/* ===================== */
+
 .liveSportsHeading {
-  font-size: 36px; /* increased size */
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
@@ -50,7 +124,7 @@
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
-  flex-wrap: nowrap; /* prevent wrapping before 768px */
+  flex-wrap: nowrap;
 }
 
 .liveSportsText {
@@ -72,29 +146,30 @@
 }
 
 /* ===================== */
-/* Medium screens (≤992px) */
+/* Responsive */
+/* ===================== */
+
 @media (max-width: 992px) {
   .liveSportsHeading {
-    font-size: 32px; /* slightly smaller but still large */
+    font-size: 32px;
   }
+
   .liveSportsContent {
-    gap: 30px; /* reduce gap */
-    flex-wrap: nowrap; /* still prevent wrapping */
+    gap: 30px;
   }
 }
 
-/* Small screens (≤768px) */
 @media (max-width: 768px) {
   .liveSportsHeading {
     font-size: 28px;
   }
+
   .liveSportsContent {
-    flex-direction: column; /* stack into single column */
+    flex-direction: column;
     gap: 20px;
   }
-  .liveSportsText {
-  flex: 1 1 100px;
-  }
+
+  .liveSportsText,
   .liveSportsImage {
     flex: 1 1 100px;
   }

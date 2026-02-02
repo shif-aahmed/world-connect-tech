@@ -7,11 +7,12 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import logo from "../../assets/logo-white.png";
+import logoWhite from "../../assets/logo-white.png"; // logo for homepage
+import logoColored from "../../assets/logo.png"; // logo for other pages
 
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ transparent }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
@@ -23,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${transparent ? "navbar-transparent" : "navbar-colored"}`}>
 
       {/* TOP BAR (Contact Info) */}
       <div className="topBar">
@@ -52,7 +53,10 @@ const Navbar = () => {
       {/* BOTTOM BAR (Logo + Links) */}
       <div className="bottomBar">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <img
+            src={transparent ? logoWhite : logoColored}
+            alt="Logo"
+          />
         </div>
 
         <div className="menuToggle" onClick={() => setMenuOpen(!menuOpen)}>

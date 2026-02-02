@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaWifi, FaMobileAlt, FaTv } from "react-icons/fa";
 import "./PackagesSection.css";
 
 const PackagesSection = () => {
   const [activePackage, setActivePackage] = useState(null);
+  const sectionRef = useRef(null);
+
+  /* ================= INTERSECTION OBSERVER ================= */
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          sectionRef.current.classList.add("packagesVisible");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+  }, []);
 
   // Dynamic card rendering (UNIVERSAL)
   const renderTripleCards = (cardsData, highlightIndex = null, showAvailability = true) => (
-
     <div className="triplePricingGrid">
       {cardsData.map((card, index) => (
         <div
@@ -17,9 +32,10 @@ const PackagesSection = () => {
           {highlightIndex === index && <div className="badge">Best value</div>}
 
           <h4>{card.title}</h4>
-         {highlightIndex === index && showAvailability && (
-  <p className="availabilityNote">*where available</p>
-)}
+
+          {highlightIndex === index && showAvailability && (
+            <p className="availabilityNote">*where available</p>
+          )}
 
           {card.subtitle && <p className="tvSubtitle">{card.subtitle}</p>}
 
@@ -48,12 +64,11 @@ const PackagesSection = () => {
     </div>
   );
 
-  /* ================= DATA ================= */
+  /* ================= DATA (UNCHANGED) ================= */
 
   const singlePlayInternet = [
     {
       title: "1 Gbps",
-
       features: [],
       footer: [
         "With ABP & paperless bill",
@@ -64,13 +79,11 @@ const PackagesSection = () => {
     },
     {
       title: "500 Mbps",
-
       features: [],
       footer: ["With ABP & paperless bill", "Gateway included", "1-year price lock"],
     },
     {
       title: "300 Mbps",
-
       features: [],
       footer: ["With ABP & paperless bill", "Gateway included", "1-year price lock"],
     },
@@ -118,7 +131,6 @@ const PackagesSection = () => {
   const singlePlayMobile = [
     {
       title: "Unlimited Max",
-
       features: [],
       footer: [
         "2 lines – $80/mo",
@@ -132,7 +144,6 @@ const PackagesSection = () => {
     },
     {
       title: "Unlimited",
-
       features: [],
       footer: [
         "2 lines – $60/mo",
@@ -146,7 +157,6 @@ const PackagesSection = () => {
     },
     {
       title: "5 Gbps",
-
       features: [],
       footer: [
         "5GB premium data",
@@ -157,7 +167,6 @@ const PackagesSection = () => {
     },
     {
       title: "1 Gbps",
-
       features: [],
       footer: [
         "1GB premium data",
@@ -171,78 +180,28 @@ const PackagesSection = () => {
   const doublePlayInternetMobile = [
     {
       title: "1 Gbps / 2 Gbps*",
-
       features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "500 Mbps",
-
       features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school"],
       footer: ["1-year price lock", "Gateway included"],
     },
     {
       title: "300 Mbps",
- 
       features: ["Streaming", "Gaming", "Downloading large files"],
       footer: ["1-year price lock", "Gateway included"],
     },
   ];
 
-  const doublePlayInternetTV = [
-    {
-      title: "1 Gbps / 2 Gbps*",
+  const doublePlayInternetTV = [...doublePlayInternetMobile];
 
-      features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices"],
-      footer: ["1-year price lock", "Gateway included"],
-    },
-    {
-      title: "500 Mbps",
- 
-      features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school"],
-      footer: ["1-year price lock", "Gateway included"],
-    },
-    {
-      title: "300 Mbps",
-
-      features: ["Streaming", "Gaming", "Downloading large files"],
-      footer: ["1-year price lock", "Gateway included"],
-    },
-  ];
-
-  const triplePlayCards = [
-    {
-      title: "1 Gbps / 2 Gbps*",
-
-      features: ["Ultra-fast speed", "Ultra-connected homes", "Great for multiple devices",],
-      footer: [
-        "1-year price lock",
-        "Gateway included",
-      ],
-    },
-    {
-      title: "500 Mbps",
-
-      features: ["Streaming 4K UHD", "Multiplayer gaming", "Remote work & school",],
-      footer: [
-        "1-year price lock",
-        "Gateway included",
-      ],
-    },
-    {
-      title: "300 Mbps",
-
-      features: ["Streaming", "Gaming", "Downloading large files",],
-      footer: [
-        "1-year price lock",
-        "Gateway included",
-      ],
-    },
-  ];
+  const triplePlayCards = [...doublePlayInternetMobile];
 
   return (
     <>
-      <section className="packagesSection">
+      <section ref={sectionRef} className="packagesSection">
         <h2 className="packagesHeading">Select Your Preferred Plan</h2>
 
         <div className="packagesCards">
@@ -281,47 +240,32 @@ const PackagesSection = () => {
       {activePackage && (
         <div className="packageModalOverlay">
           <div className="packageModal tripleModal">
-            <button className="closeModal" onClick={() => setActivePackage(null)}>
-              ✕
-            </button>
+            <button className="closeModal" onClick={() => setActivePackage(null)}>✕</button>
 
             {activePackage === "single" && (
               <>
                 <h3>Internet</h3>
-                <div className="tripleIcons">
-                  <FaWifi />
-                </div>
+                <div className="tripleIcons"><FaWifi /></div>
                 {renderTripleCards(singlePlayInternet)}
 
                 <h3 style={{ marginTop: "50px" }}>Entertainment TV</h3>
-                <div className="tripleIcons">
-                  <FaTv />
-                </div>
+                <div className="tripleIcons"><FaTv /></div>
                 {renderTripleCards(singlePlayEntertainmentTV)}
 
                 <h3 style={{ marginTop: "50px" }}>Mobile Phone</h3>
-                <div className="tripleIcons">
-                  <FaMobileAlt />
-                </div>
+                <div className="tripleIcons"><FaMobileAlt /></div>
                 {renderTripleCards(singlePlayMobile, 1, false)}
-
               </>
             )}
 
             {activePackage === "double" && (
               <>
                 <h3>Internet + Mobile</h3>
-                <div className="tripleIcons">
-                  <FaWifi />
-                  <FaMobileAlt />
-                </div>
+                <div className="tripleIcons"><FaWifi /><FaMobileAlt /></div>
                 {renderTripleCards(doublePlayInternetMobile, 0)}
 
                 <h3 style={{ marginTop: "50px" }}>Internet + Entertainment TV</h3>
-                <div className="tripleIcons">
-                  <FaWifi />
-                  <FaTv />
-                </div>
+                <div className="tripleIcons"><FaWifi /><FaTv /></div>
                 {renderTripleCards(doublePlayInternetTV, 0)}
               </>
             )}
@@ -329,11 +273,7 @@ const PackagesSection = () => {
             {activePackage === "triple" && (
               <>
                 <h3>Internet + Mobile + Entertainment TV</h3>
-                <div className="tripleIcons">
-                  <FaWifi />
-                  <FaMobileAlt />
-                  <FaTv />
-                </div>
+                <div className="tripleIcons"><FaWifi /><FaMobileAlt /><FaTv /></div>
                 {renderTripleCards(triplePlayCards, 0)}
               </>
             )}

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import Footer from "./components/Footer/Footer";
 import RetailersSection from "./components/RetailersSection/RetailersSection";
@@ -11,21 +11,32 @@ import Faq from "./pages/Faq/Faq";
 import Contact from "./pages/Contact/Contact";
 import './App.css';
 
-function App() {
+// Wrapper to use useLocation
+function AppWrapper() {
+  const location = useLocation();
+  const isHome = location.pathname === "/"; // true only on homepage
+
   return (
-    <Router>
-      <Navbar />
+    <>
+      <Navbar transparent={isHome} />
       <Routes>
         <Route path="/" element={<Home />} />
-         <Route path="/about" element={<About />} />
-         <Route path="/faq" element={<Faq />} />
-         <Route path="/services" element={<ServicesPage />} />
-        
-        {/*<Route path="/privacy" element={<Privacy />} />*/}
+        <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/services" element={<ServicesPage />} />
+        {/* <Route path="/privacy" element={<Privacy />} /> */}
         <Route path="/contact" element={<Contact />} /> 
       </Routes>
       <RetailersSection />
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppWrapper />
     </Router>
   );
 }

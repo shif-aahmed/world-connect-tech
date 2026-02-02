@@ -1,11 +1,22 @@
 .navbar {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Transparent only for homepage */
+.navbar-transparent {
   background-color: transparent;
   color: rgb(255, 255, 255);
-  width: 100%;
-position: relative;
-top:0;
-left:0;
-z-index: 1000;
+}
+
+/* Colored for other pages */
+.navbar-colored {
+  background-color: #f0f0f0; /* desired color for other pages */
+  color: rgb(0, 0, 0);
 }
 
 /* ========================= */
@@ -17,7 +28,7 @@ z-index: 1000;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-    position: sticky;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -56,12 +67,12 @@ z-index: 1000;
   background-color: #000000;
   padding: 8px 20px;
   color: #ffffff;
-clip-path: polygon(
-  0 0,          /* top-left (unchanged) */
-  100% 0,       /* top-right */
-  100% 100%,    /* bottom-right */
-  -5% 100%      /* bottom-left (outer / sticks out) */
-);
+  clip-path: polygon(
+    0 0,          /* top-left (unchanged) */
+    100% 0,       /* top-right */
+    100% 100%,    /* bottom-right */
+    -5% 100%      /* bottom-left (outer / sticks out) */
+  );
 }
 
 /* ========================= */
@@ -72,7 +83,7 @@ clip-path: polygon(
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 10px 20px;
   position: relative;
   gap: 40px; /* brings links closer to logo */
 }
@@ -95,7 +106,7 @@ clip-path: polygon(
 .link {
   cursor: pointer;
   transition: color 0.3s ease;
-  color: rgb(255, 255, 255);
+  color: inherit; /* inherit from navbar color */
   text-decoration: none;
   font-size: 18px;
 }
@@ -142,13 +153,16 @@ clip-path: polygon(
     display: flex;
     z-index: 9999;
   }
-  .topBar{
+
+  .topBar {
     flex-wrap: wrap;
   }
+
   .socials {
     width: 100%;
   }
+
   .contactInfo {
-     width: 100%; 
+    width: 100%; 
   }
 }

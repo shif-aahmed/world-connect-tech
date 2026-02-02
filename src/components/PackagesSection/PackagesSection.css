@@ -131,7 +131,7 @@
 
 /* CARD */
 .pricingCard {
-  border: 2px solid #c0c0c0;
+  border: 1.5px solid #c0c0c0;
   border-radius: 14px;
   padding: 30px 25px;
   width: 280px;
@@ -139,8 +139,13 @@
   position: relative;
   text-align: left;
   box-sizing: border-box;
-}
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* smooth transition */
 
+}
+.pricingCard:hover {
+  transform: scale(1); /* slightly scale up */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* enhanced shadow */
+}
 .pricingCard h4 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -182,6 +187,8 @@
 /* BEST VALUE */
 .bestValue {
   border-color: #00224e;
+  background-color: #ecf4ff;
+  color: #000000;
 }
 
 .badge {
@@ -212,4 +219,48 @@
 }
 .tripleIcons{
   margin-bottom: 10px;
+}
+/* ================= ANIMATION ================= */
+.packagesSection {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.packagesSection.packagesVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* STAGGER CARD ANIMATION */
+.packagesVisible .packageCard {
+  animation: cardFadeUp 0.6s ease forwards;
+}
+
+.packagesVisible .packageCard:nth-child(1) { animation-delay: 0.1s; }
+.packagesVisible .packageCard:nth-child(2) { animation-delay: 0.25s; }
+.packagesVisible .packageCard:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.packageModal {
+  overflow-y: scroll; /* still scrollable */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mainContent::-webkit-scrollbar {
+  width: 0px; /* Chrome, Safari, Edge */
+  background: transparent;
+}
+
+.mainContent {
+  -ms-overflow-style: none; /* IE and Edge */
 }
