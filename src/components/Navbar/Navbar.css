@@ -1,9 +1,11 @@
 .navbar {
-  background-color: rgb(233, 233, 233);
-  color: rgb(0, 0, 0);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
   width: 100%;
-  border-bottom: 1px solid #333;
-
+position: relative;
+top:0;
+left:0;
+z-index: 1000;
 }
 
 /* ========================= */
@@ -93,7 +95,7 @@ clip-path: polygon(
 .link {
   cursor: pointer;
   transition: color 0.3s ease;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 18px;
 }
@@ -128,7 +130,7 @@ clip-path: polygon(
   .links {
     display: none;
     flex-direction: column;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(0, 0, 0);
     position: absolute;
     top: 100%;
     right: 20px;

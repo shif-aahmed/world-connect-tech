@@ -7,7 +7,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo-white.png";
 
 import "./Navbar.css";
 
