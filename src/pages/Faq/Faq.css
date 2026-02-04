@@ -2,8 +2,11 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  color: #333;
+  color: #ffffff;
   line-height: 1.7;
+      background-color: transparent;
+    position: relative; /* important */
+  z-index: 1;    
 }
 
 .faqHeading {
@@ -18,7 +21,7 @@
   font-size: 28px;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #222;
+  color: #ffffff;
 }
 
 .faqContent p {
