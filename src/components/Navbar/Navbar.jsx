@@ -29,8 +29,8 @@ const Navbar = ({ transparent }) => {
       {/* TOP BAR (Contact Info) */}
       <div className="topBar">
         <div className="contactInfo">
-          <a href="tel:+14129950913">
-            <FaPhoneAlt /> +1 412 995 0913
+          <a href="tel:8883385011">
+            <FaPhoneAlt /> 8883385011
           </a>
           <a href="mailto:info@worldcontechllc.com">
             <FaEnvelope /> info@worldcontechllc.com

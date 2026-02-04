@@ -28,7 +28,7 @@ const LiveSportsSection = () => {
         <div className="callNowText">
           Enjoy fast, reliable internet, premium TV, and flexible mobile plans — all with professional setup and 24/7 support.
         </div>
-        <a href="tel:+14129950913">
+        <a href="tel:8883385011">
           <button className="callNowBtn">Call Now</button>
         </a>
       </div>

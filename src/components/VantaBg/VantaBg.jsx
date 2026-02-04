@@ -17,7 +17,7 @@ const VantaBg = () => {
         gyroControls: false,
 
         // IMPORTANT: sizing
-        minHeight: 2500,
+        minHeight: 5000,
         minWidth: 200,
 
         scale: 1.0,
@@ -30,7 +30,8 @@ const VantaBg = () => {
 
         // COLORS
         color: 0xff0000,          // red lines
-        backgroundColor: 0x000000 // black background
+        backgroundColor: 0x3a3a3a // very dark grey (almost black)
+ // black background
       });
     }
 

@@ -55,7 +55,7 @@ const Footer = () => {
               Get in connect
           </h4>
           <p className="footerText">
-            <a href="tel:+14129950913">+1 412-995-0913</a>
+            <a href="tel:8883385011">8883385011</a>
             <br />
             <a href="mailto:info@worldcontechllc.com">
             info@worldcontechllc.com
