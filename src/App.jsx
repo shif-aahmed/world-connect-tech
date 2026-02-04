@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import VantaBg from "./components/VantaBg/VantaBg";
+
 import Navbar from './components/Navbar/Navbar';
 import Footer from "./components/Footer/Footer";
 import RetailersSection from "./components/RetailersSection/RetailersSection";
@@ -18,6 +20,9 @@ function AppWrapper() {
 
   return (
     <>
+    <div className="vanta-wrapper">
+        <VantaBg />
+
       <Navbar transparent={isHome} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,6 +33,7 @@ function AppWrapper() {
         <Route path="/contact" element={<Contact />} /> 
       </Routes>
       <RetailersSection />
+      </div>
       <Footer />
     </>
   );

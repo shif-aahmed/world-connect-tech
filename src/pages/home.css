@@ -1,0 +1,14 @@
+/* .home-bg {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+
+.home-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("./../assets/hero.jpg") center / cover no-repeat;
+  z-index: -1;
+} */

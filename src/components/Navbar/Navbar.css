@@ -1,9 +1,8 @@
 .navbar {
   width: 100%;
-  position: relative;
+  position: relative; /* KEY */
   top: 0;
-  left: 0;
-  z-index: 1000;
+  z-index: 10;
   transition: background-color 0.3s, color 0.3s;
 }
 
