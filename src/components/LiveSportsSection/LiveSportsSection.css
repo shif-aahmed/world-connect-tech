@@ -81,10 +81,11 @@
   margin-bottom: 50px;
   line-height: 1.4;
   color: #ffffff;
-  background-color: rgb(0, 0, 40);
+  background: linear-gradient(180deg, #b7b7b7c1, #d7d7d7c1);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 12px;
 }
 
 .callNowText {
@@ -92,7 +93,7 @@
 }
 
 .callNowBtn {
-  background-color: #e00000;
+  background: linear-gradient(180deg, #ff0000, #b00000);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -114,7 +115,7 @@
   text-align: center;
   margin-bottom: 50px;
   line-height: 1.4;
-  color: #222;
+  color: #ffffff;
 }
 
 .liveSportsContent {
@@ -131,7 +132,7 @@
   flex: 1 1 500px;
   font-size: 20px;
   line-height: 1.8;
-  color: #555;
+  color: #f9f9f9;
 }
 
 .liveSportsImage {
