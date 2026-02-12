@@ -1,0 +1,266 @@
+.packagesSection {
+  width: 100%;
+  padding: 80px 20px 0px;
+  background-color:transparent;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.packagesHeading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.packagesSubheading {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.packagesCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.packageCard {
+  background: linear-gradient(180deg, #b7b7b7c1, #d7d7d7c1);
+  padding: 40px 30px;
+  border-radius: 12px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  cursor: pointer;
+    box-shadow: 0 0px 8px rgba(65, 63, 63, 0.333);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.packageCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.availabilityNote {
+  font-size: 12px;
+  color: #333333;
+  margin-top: 4px;
+}
+
+.packageCard h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.packageCard p {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* TRIPLE PLAY CARD */
+.tripleSubheading {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.tripleIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 22px;
+  color: #ba0000;
+}
+.availability {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ===================== */
+/* MODAL OVERLAY */
+.packageModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* prevents edge overflow */
+}
+
+/* MODAL */
+.packageModal {
+  background: #e4e4e4;
+  padding: 40px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 85vh;          /* ✅ FIXED HEIGHT ISSUE */
+  overflow-y: auto;          /* ✅ INTERNAL SCROLL */
+  position: relative;
+  text-align: center;
+  scrollbar-width: thin;
+}
+
+/* CLOSE BUTTON */
+.closeModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* TRIPLE PLAY GRID */
+.triplePricingGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CARD */
+.pricingCard {
+  border: 1.5px solid #929292;
+  border-radius: 14px;
+  padding: 30px 25px;
+  width: 280px;
+  max-width: 100%;      /* ✅ PREVENT OVERFLOW */
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* smooth transition */
+
+}
+.pricingCard:hover {
+  transform: scale(1); /* slightly scale up */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* enhanced shadow */
+}
+.pricingCard h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ee0000;
+  margin-bottom: 15px;
+}
+
+.price span {
+  font-size: 14px;
+  color: #666;
+}
+
+.pricingCard ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.pricingCard ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.cardFooter {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #666;
+}
+
+/* BEST VALUE */
+.bestValue {
+  border-color: #00224e;
+  background-color: #dadde1;
+  color: #000000;
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #00224e;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 0px 11px 0 5px;
+  font-size: 12px;
+}
+
+/* ===================== */
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .packagesHeading {
+    font-size: 28px;
+  }
+
+  .packageModal {
+    padding: 25px;
+  }
+
+  .pricingCard {
+    width: 100%;          /* ✅ FULL WIDTH ON MOBILE */
+  }
+}
+.tripleIcons{
+  margin-bottom: 10px;
+}
+/* ================= ANIMATION ================= */
+.packagesSection {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.packagesSection.packagesVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* STAGGER CARD ANIMATION */
+.packagesVisible .packageCard {
+  animation: cardFadeUp 0.6s ease forwards;
+}
+
+.packagesVisible .packageCard:nth-child(1) { animation-delay: 0.1s; }
+.packagesVisible .packageCard:nth-child(2) { animation-delay: 0.25s; }
+.packagesVisible .packageCard:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.packageModal {
+  overflow-y: scroll; /* still scrollable */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mainContent::-webkit-scrollbar {
+  width: 0px; /* Chrome, Safari, Edge */
+  background: transparent;
+}
+
+.mainContent {
+  -ms-overflow-style: none; /* IE and Edge */
+}

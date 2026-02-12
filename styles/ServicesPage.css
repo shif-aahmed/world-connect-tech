@@ -1,0 +1,81 @@
+.servicesPage {
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+    background-color: transparent;
+    position: relative; /* important */
+  z-index: 1;    
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.headerSection h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+    color: #ffffff;
+
+}
+
+.headerSection .headerImage {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+    color: #ffffff;
+
+}
+
+.headerSection h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ff0000;
+}
+
+.headerSection .headerText {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+    color: #ffffff;
+
+}
+
+.servicesSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.serviceCard {
+  background-color: #f8f8f8;
+  padding: 25px 20px;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.serviceCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.serviceCard p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}

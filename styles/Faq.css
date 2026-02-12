@@ -1,0 +1,30 @@
+.faqPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #ffffff;
+  line-height: 1.7;
+      background-color: transparent;
+    position: relative; /* important */
+  z-index: 1;    
+}
+
+.faqHeading {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #e00000;
+}
+
+.faqContent h2 {
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.faqContent p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}

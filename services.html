@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - World Connect Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <!-- Vanta NET -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+ 
+  <link rel="stylesheet" href="./styles/ServicesPage.css" />
+
+  <style>
+    /* Vanta Background */
+    #vanta-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+  </style>
+   <link rel="stylesheet" href="./styles/main.css" />
+   <link rel="stylesheet" href="./styles/About.css" />
+     <link rel="stylesheet" href="./styles/Navbar.css" />
+       <link rel="stylesheet" href="./styles/PackagesSection.css" />
+  <link rel="stylesheet" href="./styles/Footer.css" />
+
+  <link rel="stylesheet" href="./styles/RetailersSection.css" />
+
+</head>
+
+<body>
+
+  <!-- VANTA BACKGROUND -->
+  <div id="vanta-bg"></div>
+
+  <nav class="navbar navbar-colored">
+
+    <!-- TOP BAR -->
+    <div class="topBar">
+      <div class="contactInfo">
+        <a href="tel:8883385011">
+          <i class="fas fa-phone-alt"></i> 8883385011
+        </a>
+
+        <a href="mailto:info@worldcontechllc.com">
+          <i class="fas fa-envelope"></i> info@worldcontechllc.com
+        </a>
+
+        <a
+          href="https://www.google.com/maps?q=141+E+26TH+St,+Erie,+PA+16504"
+          target="_blank"
+        >
+          <i class="fas fa-map-marker-alt"></i> 141 E 26TH St, Erie, PA 16504
+        </a>
+      </div>
+
+      <div class="socials">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottomBar">
+      <div class="logo">
+        <img src="./assets/logo-white.png" alt="Logo" id="logoImg" />
+      </div>
+
+      <div class="menuToggle" id="menuToggle">
+        ☰
+      </div>
+
+      <div class="links" id="navLinks">
+        <a href="index.html" class="link ">Home</a>
+        <a href="about.html" class="link ">About Us</a>
+        <a href="services.html" class="link active">Services</a>
+        <a href="faq.html" class="link">FAQ</a>
+        <a href="contact.html" class="link">Contact Us</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <section class="servicesPage">
+
+  <!-- HEADER SECTION -->
+  <div class="headerSection">
+    <h1>
+      Exciting live sports and entertaining TV shows for your closest companions
+    </h1>
+
+    <img src="assets/livesport.png" alt="Live Sports" class="headerImage">
+
+    <h2>4K Ultra HD Quality</h2>
+
+    <p class="headerText">
+      Watch the most recent live sports and special occasions from across the globe.
+      Acquire entry to numerous on-demand series and films to indulge in an excellent TV watching experience.
+    </p>
+  </div>
+
+  <!-- SERVICES CARDS -->
+  <div class="servicesSection">
+
+    <div class="serviceCard">
+      <h3>Exciting live sports and entertaining TV shows for your closest companions</h3>
+      <p>
+        Watch the most recent live sports and special occasions from across the globe.
+        Acquire entry to numerous on-demand series and films to indulge in an excellent TV watching experience.
+      </p>
+    </div>
+
+    <div class="serviceCard">
+      <h3>Residential telephone service</h3>
+      <p>
+        Maintain connectivity throughout dependable digital telephone services, endless local calls,
+        cost-effective international permanent charges, and enhanced calling capabilities.
+      </p>
+    </div>
+
+    <div class="serviceCard">
+      <h3>Cable TV & Internet</h3>
+      <p>
+        Obtain top-notch amusement for loved ones and companions and ultra-swift internet connectivity
+        for streaming videos and engaging in online gaming at remarkable prices.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- PACKAGES SECTION PLACEHOLDER -->
+  <div class="packagesSectionPlaceholder">
+    <!-- You can paste your PackagesSection HTML here -->
+  </div>
+
+</section>
+<section class="packagesSection" id="packagesSection">
+  <h2 class="packagesHeading">Select Your Preferred Plan</h2>
+
+  <div class="packagesCards">
+    <div class="packageCard triplePlayCard" onclick="openPackage('single')">
+      <h3>Single Play</h3>
+      <p>Internet / Mobile / TV</p>
+      <div class="tripleIcons">
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-mobile-alt"></i>
+        <i class="fas fa-tv"></i>
+      </div>
+    </div>
+
+    <div class="packageCard triplePlayCard" onclick="openPackage('double')">
+      <h3>Double Play</h3>
+      <p>Internet / Mobile / TV</p>
+      <div class="tripleIcons">
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-mobile-alt"></i>
+        <i class="fas fa-tv"></i>
+      </div>
+    </div>
+
+    <div class="packageCard triplePlayCard" onclick="openPackage('triple')">
+      <h3>Triple Play</h3>
+      <p>Internet / Mobile / TV</p>
+      <div class="tripleIcons">
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-mobile-alt"></i>
+        <i class="fas fa-tv"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="packageModalOverlay" id="packageModalOverlay">
+  <div class="packageModal tripleModal">
+    <button class="closeModal" onclick="closePackage()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+  <div class="retailersContainer">
+
+    <div class="retailerLogo">
+      <img src="./assets/optimum.png" alt="Retailer 1" />
+    </div>
+
+    <div class="retailerLogo">
+      <img src="./assets/spectrumbusiness.png" alt="Retailer 2" />
+    </div>
+
+    <div class="retailerLogo">
+      <img src="./assets/frontier.png" alt="Retailer 3" />
+    </div>
+
+    <div class="retailerLogo">
+      <img src="./assets/brightspeed.png" alt="Retailer 4" />
+    </div>
+
+    <div class="retailerLogo">
+      <img src="./assets/earthlink.png" alt="Retailer 5" />
+    </div>
+
+    <div class="retailerLogo">
+      <img src="./assets/kinetic.png" alt="Retailer 6" />
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="footerContainer">
+
+    <!-- Column 1 -->
+    <div class="footerCol">
+      <div class="footerLogo">
+        <img src="assets/logo.png" alt="Logo">
+      </div>
+
+      <p class="footerText">
+        World Connect Tech is your one-stop shop for TV, internet, and phone
+        services. We provide the best deals in your area.
+      </p>
+
+      <div class="footerSocials">
+        <a href="#" class="socialIcon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="socialIcon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footerCol">
+      <h4>Quick Links</h4>
+
+      <div class="footerLinks">
+        <a href="index.html" class="footerLink">Home</a>
+        <a href="about.html" class="footerLink">About Us</a>
+        <a href="services.html" class="footerLink active">Services</a>
+        <a href="faq.html" class="footerLink">FAQs</a>
+        <a href="contact.html" class="footerLink">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footerCol">
+      <h4>Get in connect</h4>
+
+      <p class="footerText">
+        <a href="tel:8883385011">888-338-5011</a>
+        <br>
+        <a href="mailto:info@worldcontechllc.com">
+          info@worldcontechllc.com
+        </a>
+        <br><br>
+        Don't miss our future updates.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- Vanta Initialization Script -->
+  <script>
+    let vantaEffect;
+
+    function initVanta() {
+      const isMobile = window.innerWidth < 768;
+
+      vantaEffect = VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 500,
+        minWidth: 200,
+        scale: 1.0,
+        scaleMobile: isMobile ? 1.5 : 1.0,
+        points: isMobile ? 6.0 : 12.0,
+        maxDistance: isMobile ? 15.0 : 25.0,
+        spacing: isMobile ? 10.0 : 18.0,
+        color: 0xffffff,
+        backgroundColor: 0x3a3a3a
+      });
+    }
+
+    initVanta();
+
+    window.addEventListener("resize", function () {
+      if (vantaEffect) vantaEffect.destroy();
+      initVanta();
+    });
+  </script>
+  <script src="./PackagesSection.js"></script>
+<script>
+  // Get the toggle button and links container
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  // Toggle 'show' class on click
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

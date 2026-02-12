@@ -1,0 +1,174 @@
+/* .hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: -100px;
+} */
+
+.heroOverlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 720px;
+  padding: 60px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroTopText,
+.heroContent h1,
+.heroContent p,
+.heroCTA {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.heroTopText {
+  animation-delay: 0.2s;
+}
+
+.heroContent h1 {
+  animation-delay: 0.4s;
+}
+
+.heroContent p {
+  animation-delay: 0.6s;
+}
+
+.heroCTA {
+  animation-delay: 0.8s;
+}
+
+/* ========================= */
+/* Top small text */
+/* ========================= */
+
+.heroTopText {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.heroTopText span {
+  margin: 0 8px;
+}
+
+/* ========================= */
+/* Heading */
+/* ========================= */
+
+.heroContent h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #ff0000, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================= */
+/* Description */
+/* ========================= */
+
+.heroContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+  opacity: 0.95;
+}
+
+/* ========================= */
+/* CTA */
+/* ========================= */
+
+.heroCTA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroBtn {
+  background: linear-gradient(270deg, #ff0000, #6c0000);
+  color: white;
+  border: none;
+  padding: 14px 34px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.heroBtn:hover {
+  background: linear-gradient(270deg, #6c0000, #ff0000);
+  transform: translateY(-2px);
+}
+
+.heroSubText {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 75vh;
+  }
+
+  .heroContent {
+    padding: 0 20px;
+  }
+
+  .heroContent h1 {
+    font-size: 30px;
+  }
+
+  .heroContent p {
+    font-size: 14px;
+  }
+
+  .heroBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 24px;
+  }
+
+  .heroTopText {
+    font-size: 12px;
+  }
+}
